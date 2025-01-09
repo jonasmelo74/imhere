@@ -24,7 +24,8 @@ export function Home() {
     Alert.alert("Remover participante", `Deseja remover o participante ${name}?`, [
       {
         text: "Sim",
-        onPress: () => Alert.alert("Participante removido com sucesso!")        
+        onPress: () => Alert.alert("Participante removido com sucesso!")      
+          
       },
       {
         text: "Não",
