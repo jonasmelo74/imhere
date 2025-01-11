@@ -10,14 +10,19 @@ import {
 import { styles } from "./styles";
 
 import { Participant } from "../../components/Participant";
+import { useState } from "react";
 
 export function Home() {
-  const participants = ["Rodrigo", "Diego", "Dani", "Rafael", "Rodrigo1", "Teste", "Teste2", "Teste3", "Teste4", "Teste5"];
+  const [participants, setParticipants] = useState<string[]>([]);
+  const [participantName, setParticipantName] = useState('');
 
   function handleAddParticipant() {
-    if(participants.includes("Rodrigo")) {
+    if(participants.includes(participantName)) {
       return Alert.alert("Erro", "Participante já cadastrado");
     }
+
+    setParticipants(prevState => [...prevState, participantName]);
+    setParticipantName('');
   }
 
   function handleAddParticipantRemove(name: string) {
@@ -47,6 +52,8 @@ export function Home() {
           style={styles.input}
           placeholder="Nome do participante"
           placeholderTextColor={"#6b6b6b"}
+          onChangeText={setParticipantName}
+          value={participantName}
         />
 
         <TouchableOpacity style={styles.button} onPress={handleAddParticipant}>
