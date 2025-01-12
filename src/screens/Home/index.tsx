@@ -86,6 +86,7 @@ export function Home() {
           Nenhum participante cadastrado
         </Text>
       )}
+      
       />
     </View>
 
