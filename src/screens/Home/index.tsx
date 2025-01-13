@@ -81,6 +81,7 @@ export function Home() {
             onRemove={() => handleAddParticipantRemove(item)}
           />
         )}
+        
       ListEmptyComponent={() => (
         <Text style={styles.listEmptyText}>
           Nenhum participante cadastrado
