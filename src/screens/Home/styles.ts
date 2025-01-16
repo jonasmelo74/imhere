@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
   eventDate: {
     color: '#6b6b6b',
     fontSize: 16
-    
+
   },
   input:{
     flex: 1,
@@ -51,4 +51,5 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
   }
+  
 })
