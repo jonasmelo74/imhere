@@ -82,11 +82,11 @@ export function Home() {
           />
         )}
         
-      ListEmptyComponent={() => (
-        <Text style={styles.listEmptyText}>
-          Nenhum participante cadastrado
-        </Text>
-      )}
+        ListEmptyComponent={() => (
+          <Text style={styles.listEmptyText}>
+            Nenhum participante cadastrado
+          </Text>
+        )}
       
       />
     </View>
