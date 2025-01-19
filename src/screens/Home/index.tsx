@@ -26,10 +26,11 @@ export function Home() {
   }
 
   function handleAddParticipantRemove(name: string) {
+
     Alert.alert("Remover participante", `Deseja remover o participante ${name}?`, [
       {
         text: "Sim",
-        onPress: () => Alert.alert("Participante removido com sucesso!")      
+        onPress: () => setParticipants(prevState => prevState.filter(participant => participant !== name)) 
           
       },
       {
@@ -37,9 +38,6 @@ export function Home() {
         style: "cancel",
       },
     ]);
-
-
-    console.log(`Removendo o participante ${name}`);
   }
 
   return (
