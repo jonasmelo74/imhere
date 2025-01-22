@@ -31,7 +31,6 @@ export function Home() {
       {
         text: "Sim",
         onPress: () => setParticipants(prevState => prevState.filter(participant => participant !== name)) 
-          
       },
       {
         text: "Não",
